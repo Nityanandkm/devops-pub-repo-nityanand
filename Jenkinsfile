@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Building war file"){
             steps{
-                echo "war file builded"
+                echo "war file builded successfully"
             }
 
         }
