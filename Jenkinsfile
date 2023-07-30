@@ -5,17 +5,20 @@ pipeline{
             steps{
                 echo "war file builded"
             }
-            post{
-                always{
-                    echo "========always========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
+
+        }
+
+    stage("Testing war file"){
+            steps{
+                echo "war file tested successfully"
             }
+
+        }
+    stage("Deploying war file to tomcat"){
+            steps{
+                echo "Deployed successfully"
+            }
+
         }
     }
     post{
